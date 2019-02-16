@@ -6,7 +6,7 @@
 /*   By: jcreux <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/06 21:13:30 by jcreux            #+#    #+#             */
-/*   Updated: 2019/02/15 16:17:17 by jcreux           ###   ########.fr       */
+/*   Updated: 2019/02/16 18:10:29 by jcreux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -103,7 +103,7 @@ int			get_next_line(const int fd, char **line)
 	char			*tmp;
 	static t_struct	st = {NULL, -1};
 
-	if (fd == -1)
+	if (fd == -1 || line == NULL)
 		return (-1);
 	if (st.old_fd == -1)
 		st.old_fd = fd;
