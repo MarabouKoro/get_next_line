@@ -6,7 +6,7 @@
 /*   By: jcreux <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/06 21:13:30 by jcreux            #+#    #+#             */
-/*   Updated: 2019/02/16 18:10:29 by jcreux           ###   ########.fr       */
+/*   Updated: 2019/02/16 20:43:28 by jcreux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -67,6 +67,7 @@ static char	*ft_empty_end_b(char *s)
 			i++;
 		}
 	free(s2);
+	//free(s)
 	return (NULL);
 }
 
@@ -112,15 +113,15 @@ int			get_next_line(const int fd, char **line)
 	st.old_fd = fd;
 	if (st.end_b == NULL)
 		st.end_b = ft_strnew(0);
-	tmp = ft_empty_end_b(st.end_b);
+	tmp = ft_empty_end_b(st.end_b); //free(st.end_b)
 	if (tmp != NULL)
 	{
 		*line = tmp;
-		st.end_b = ft_fill_end_b(ft_strfind(st.end_b, 10) + 1, st.end_b);
+		st.end_b = ft_fill_end_b(ft_strfind(st.end_b, 10) + 1, st.end_b); //remplacer st.end_b par tmp
 		return (1);
 	}
 	tmp = st.end_b;
-	if (!tmp || fd < 0)
+	if (!tmp || fd < 0) //useful ?
 		return (-1);
 	return (ft_read(fd, tmp, line, &(st.end_b)));
 }
