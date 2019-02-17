@@ -2,7 +2,7 @@
 #include <stdio.h>
 #include <fcntl.h>
 
-#include "get_next_line.h"
+#include "get_next_line.c"
 
 int		main(void)
 {
@@ -11,7 +11,7 @@ int		main(void)
 	int		res;
 
 	while ((res = get_next_line(fd, &line)) > 0)
-		printf("%s\n", line);
+		printf("%d -- %s\n", res, line);
 	printf("%d\n", res);
 
 	close(fd);
