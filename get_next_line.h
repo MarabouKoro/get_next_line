@@ -6,7 +6,7 @@
 /*   By: jcreux <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 20:18:10 by jcreux            #+#    #+#             */
-/*   Updated: 2019/02/18 00:20:56 by jcreux           ###   ########.fr       */
+/*   Updated: 2019/05/02 03:10:58 by jcreux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,8 +14,6 @@
 # define GET_NEXT_LINE_H
 
 # include "libft/libft.h"
-# include <stdlib.h>
-
 # define BUFF_SIZE 32
 
 typedef struct	s_list

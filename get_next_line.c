@@ -6,12 +6,13 @@
 /*   By: jcreux <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2019/02/06 21:13:30 by jcreux            #+#    #+#             */
-/*   Updated: 2019/02/18 02:32:39 by jcreux           ###   ########.fr       */
+/*   Updated: 2019/05/02 03:06:22 by jcreux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
-#include "get_next_line.h"
+#include <stdlib.h>
 #include <unistd.h>
+#include "get_next_line.h"
 
 static char	*ft_line(int n, char *s, char *buffer)
 {
