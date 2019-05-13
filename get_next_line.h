@@ -6,7 +6,7 @@
 /*   By: jcreux <marvin@42.fr>                      +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2018/12/19 20:18:10 by jcreux            #+#    #+#             */
-/*   Updated: 2019/05/02 03:10:58 by jcreux           ###   ########.fr       */
+/*   Updated: 2019/05/14 00:25:25 by jcreux           ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -16,7 +16,7 @@
 # include "libft/libft.h"
 # define BUFF_SIZE 32
 
-typedef struct	s_list
+typedef struct	s_struct
 {
 	char	*end_b;
 	int		old_fd;

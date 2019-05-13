@@ -7,15 +7,15 @@ int		main(int ac, char **av)
 	(void)ac;
 	int		fd = open(av[1], O_RDONLY);
 	char	*line;
-	int		res;
+	int		ret;
 
-	while ((res = get_next_line(fd, &line)) > 0)
+	while ((ret = get_next_line(fd, &line)) > 0)
 	{
-		printf("%s\n", line);
+		printf("%d - %s\n", ret, line);
 		free(line);
 	}
-	printf("%d\n", res);
+	printf("%d\n", ret);
 
-	close (fd);
+	close(fd);
 	return(0);
 }
